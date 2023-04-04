@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <title>Words trainer</title>
+</head>
+
+<body>
+  <header>
+    <a href="/README.md" id="helpButton" title="Справка">?</a>
+    <a href="" id="sourceCodeLink" title="Исходный код на GitHub"><img src="https://github.githubassets.com/images/modules/site/icons/footer/github-mark.svg" width="20" height="20" class="d-block" loading="lazy" decoding="async" alt="GitHub mark"></a>
+  </header>
+  <div id="parent">
+    <div class="flexed" id="word-card">      
+      <span class="flexed" id="word" title="Слово">えんぴつ</span>
+      <span class="flexed" id="pronounce" title="Произношение">ЭМПиЦУ</span>
+      <span class="flexed" id="translate" title="Перевод">Карандаш</span>
+    </div>
+    <div class="flexed" id="timeDisplay">
+      <div id="timer">
+        <div id="estimated-time">&nbsp;</div>
+      </div>
+      <input id="showAnswerTime" type="range" max="1" step="0.01" value="0.2" title="Передвиньте полунок к месту с которого будет показан ответ" />
+    </div>
+    <div class="flexed" id="wordN">1</div>
+    <div id="toolPanel">
+      <input class="hideOnStart" type="number" id="durationInput" min="1" value="5" title="Интервал смены слов в секундах" />
+      <button id="timerBtn" data-state="start">Начать</button>
+      <label class="hideOnStart" title="Импорт списка слов из csv файла">
+        <input type="file" id="wordsFile" accept=".csv,.tsv" >
+        Слова
+      </label>
+    </div>
+  </div>
+
+  <footer>💻 Galeev 2023</footer>  
+
+  <script src="/js/main.js"></script>
+</body>
+
+</html>
